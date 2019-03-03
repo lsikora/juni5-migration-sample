@@ -5,12 +5,29 @@ plugins {
 group 'io.github.lsikora'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     jcenter()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+sourceCompatibility = JavaVersion.VERSION_12
+
+test {
+    useJUnitPlatform()
 }
+
+dependencies {
+    testCompile group: 'junit',
+            name: 'junit',
+            version: '4.12'
+    testCompile platform('org.junit:junit-bom:5.4.0') {
+        testCompile group: 'org.junit.jupiter',
+                name: 'junit-jupiter-api'
+        testRuntime group: 'org.junit.jupiter',
+                name: 'junit-jupiter-engine'
+        testRuntime group: 'org.junit.vintage',
+                name: 'junit-vintage-engine'
+    }
+}
+
+
+
