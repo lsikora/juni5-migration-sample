@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "io.spring.dependency-management" version '1.0.7.RELEASE'
 }
 
 group 'io.github.lsikora'
@@ -15,19 +16,20 @@ test {
     useJUnitPlatform()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom 'org.junit:junit-bom:5.4.0'
+    }
+}
+
 dependencies {
     testCompile group: 'junit',
             name: 'junit',
             version: '4.12'
-    testCompile platform('org.junit:junit-bom:5.4.0') {
-        testCompile group: 'org.junit.jupiter',
-                name: 'junit-jupiter-api'
-        testRuntime group: 'org.junit.jupiter',
-                name: 'junit-jupiter-engine'
-        testRuntime group: 'org.junit.vintage',
-                name: 'junit-vintage-engine'
-    }
+    testCompile group: 'org.junit.jupiter',
+            name: 'junit-jupiter-api'
+    testRuntime group: 'org.junit.jupiter',
+            name: 'junit-jupiter-engine'
+    testRuntime group: 'org.junit.vintage',
+            name: 'junit-vintage-engine'
 }
-
-
-
