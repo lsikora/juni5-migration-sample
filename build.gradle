@@ -42,6 +42,9 @@ dependencies {
     testCompile group: 'org.codehaus.groovy',
             name: 'groovy-all',
             version: '2.5.0'
+    testCompile group: 'pl.pragmatists',
+            name: 'JUnitParams',
+            version: '1.1.1'
 }
 
 
