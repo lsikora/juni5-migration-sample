@@ -45,6 +45,15 @@ dependencies {
     testCompile group: 'pl.pragmatists',
             name: 'JUnitParams',
             version: '1.1.1'
+    testCompile group: 'org.mockito',
+            name: 'mockito-core',
+            version: '2.2.5'
+    testCompile group: 'org.mockito',
+            name: 'mockito-junit-jupiter',
+            version: '2.25.0'
+    testImplementation group: 'com.github.rweisleder',
+            name: 'jfairy-junit-extension',
+            version: '0.2.0'
 }
 
 
