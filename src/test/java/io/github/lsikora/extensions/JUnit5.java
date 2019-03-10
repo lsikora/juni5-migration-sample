@@ -8,8 +8,10 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import static java.time.Duration.ofMillis;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 import static org.mockito.Mockito.doThrow;
-import static org.testng.Assert.assertThrows;
 
 @ExtendWith(FairyExtension.class)
 @ExtendWith(MockitoExtension.class)
@@ -17,13 +19,17 @@ class JUnit5 {
     @Mock
     private Object someObject;
     @RegisterExtension
-    FiveMinuteExtension ext = new FiveMinuteExtension("Hakunamatata");
-    
+    private FiveMinuteExtension ext = new FiveMinuteExtension("Hakunamatata");
+
     @Test
     void shouldCheckException(@Random String message) {
         doThrow(new RuntimeException(message))
                 .when(someObject).toString();
 
-       assertThrows(()-> someObject.toString());
+        assertTimeout(ofMillis(1),
+                () -> {
+                    assertThrows(
+                            RuntimeException.class,
+                            () -> someObject.toString());});
     }
 }

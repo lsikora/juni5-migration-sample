@@ -1,6 +1,5 @@
 package io.github.lsikora.parametrized;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -8,7 +7,7 @@ import java.util.Currency;
 
 import static io.github.lsikora.constants.Constants.APPLE;
 import static io.github.lsikora.constants.Constants.ORANGE;
-import static io.github.lsikora.parametrized.JUnit5.Food.GHERKIN;
+import static io.github.lsikora.parametrized.Food.GHERKIN;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.EnumSource.Mode.EXCLUDE;
 
@@ -47,7 +46,4 @@ class JUnit5 {
         assertNotSame(GHERKIN, food);
     }
 
-    enum Food {
-        ORANGE, APPLE, GHERKIN
-    }
 }
