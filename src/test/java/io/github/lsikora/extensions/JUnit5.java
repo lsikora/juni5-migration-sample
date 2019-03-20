@@ -25,7 +25,6 @@ class JUnit5 {
     void shouldCheckException(@Random String message) {
         doThrow(new RuntimeException(message))
                 .when(someObject).toString();
-
         assertTimeout(ofMillis(1),
                 () -> {
                     assertThrows(

@@ -26,9 +26,9 @@ class JUnit5 {
     @CsvSource({"JPY", "PLN"})
     @CsvFileSource(resources = "somefile.csv")
     @EnumSource(Food.class)
-    @EmptySource
-    @NullSource
-    @NullAndEmptySource
+//    @EmptySource
+//    @NullSource
+//    @NullAndEmptySource
     void allSources() {
     }
 
