@@ -17,16 +17,16 @@ test {
 }
 
 dependencies {
-    testCompile group: 'org.assertj',
+    testImplementation group: 'org.assertj',
             name: 'assertj-core',
             version: '3.12.1'
-    testCompile group: 'eu.codearte.catch-exception',
+    testImplementation group: 'eu.codearte.catch-exception',
             name: 'catch-exception',
             version: '1.4.6'
-    testCompile group: 'eu.codearte.catch-exception',
+    testImplementation group: 'eu.codearte.catch-exception',
             name: 'catch-throwable',
             version: '1.4.6'
-    testCompile group: 'junit',
+    testImplementation group: 'junit',
             name: 'junit',
             version: '4.12'
     testCompile platform('org.junit:junit-bom:5.4.0') {
@@ -36,19 +36,19 @@ dependencies {
                 name: 'junit-vintage-engine'
 
     }
-    testCompile group: 'org.spockframework',
+    testImplementation group: 'org.spockframework',
             name: 'spock-core',
             version: '1.3-groovy-2.5'
-    testCompile group: 'org.codehaus.groovy',
+    testImplementation group: 'org.codehaus.groovy',
             name: 'groovy-all',
             version: '2.5.0'
-    testCompile group: 'pl.pragmatists',
+    testImplementation group: 'pl.pragmatists',
             name: 'JUnitParams',
             version: '1.1.1'
-    testCompile group: 'org.mockito',
+    testImplementation group: 'org.mockito',
             name: 'mockito-core',
             version: '2.2.5'
-    testCompile group: 'org.mockito',
+    testImplementation group: 'org.mockito',
             name: 'mockito-junit-jupiter',
             version: '2.25.0'
     testImplementation group: 'com.github.rweisleder',
