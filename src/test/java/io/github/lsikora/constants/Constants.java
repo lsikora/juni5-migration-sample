@@ -5,7 +5,7 @@ public interface Constants {
     String ORANGE = "orange";
     String GHERKIN = "gherkin";
     String PICKLE = "pickle";
-    String GLOBAL_MESSAGE = "Something went wrong";
+    String GLOBAL_MESSAGE = "Global message";
     String VEGETABLE = "vegetable";
     String FRUIT = "fruit";
 }
