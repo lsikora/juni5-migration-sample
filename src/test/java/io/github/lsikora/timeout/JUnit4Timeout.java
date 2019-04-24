@@ -10,6 +10,11 @@ public class JUnit4Timeout {
     @Rule
     public Timeout timeout = Timeout.millis(100);
 
+    @Test
+    public void willTimeoutGlobally() throws InterruptedException{
+        sleep(200);
+    }
+
     @Test(timeout = 50)
     public void willTimeout() throws InterruptedException{
         sleep(200);
