@@ -1,4 +1,4 @@
-package io.github.lsikora.conditional.junit4.categories;
+package io.github.lsikora.conditional.categories;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;

@@ -1,4 +1,4 @@
-package io.github.lsikora.conditional.junit5.tags;
+package io.github.lsikora.conditional.tags;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,22 +13,17 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 class JUnit5Tags {
     @Test
     @Tag("Fast")
-    void fastRun() {
-    }
+    void fastRun() {}
 
     @Slow
-    void slowRun() {
-    }
+    void slowRun() {}
 
     @Test
-    void shouldNotBeRun() {
-
-    }
+    void shouldNotBeRun() {}
 
     @Target({ TYPE, METHOD })
     @Retention(RUNTIME)
     @Tag("Slow")
     @Test
-    public @interface Slow {
-    }
+    public @interface Slow {}
 }
