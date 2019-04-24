@@ -25,6 +25,16 @@ test {
 
 }
 
+//Enable java 12 switch expressions
+tasks.withType(JavaCompile).each {
+    it.options.compilerArgs.add('--enable-preview')
+}
+test { 
+    jvmArgs(['--enable-preview']) 
+}
+
+//Enable java 12 switch expressions
+
 dependencies {
     testImplementation group: 'org.assertj',
             name: 'assertj-core',
