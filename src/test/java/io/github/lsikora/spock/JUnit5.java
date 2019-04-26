@@ -29,8 +29,11 @@ class JUnit5 {
         Executable assertion = switch (kindaEvil) {
             //would be great to get shorthand notation for -> () ->. Gets
             // long without ligatures
-            case 1 -> () -> assertNotEquals(APPLE, ORANGE, MISERABLY);
-            case 2 -> () -> assertNotEquals(PICKLE, GHERKIN, MISERABLY);
+            case 1, 2 -> () -> assertNotEquals(APPLE, ORANGE, MISERABLY);
+            case 3 -> {
+                System.out.println("");
+                break () -> assertNotEquals(PICKLE, GHERKIN, MISERABLY);
+            }
             default -> fail(MISERABLY);
         };
 
@@ -51,12 +54,16 @@ class JUnit5 {
         Executable assertion = switch (kindaEvil) {
             //would be great to get shorthand notation for -> () ->. Gets
             // long without ligatures
-            case 1 : break  () -> assertNotEquals(APPLE, ORANGE, MISERABLY);
+            case 1:
+                System.out.println("");
+                break () -> assertNotEquals(APPLE, ORANGE, MISERABLY);
             //good that there is compilation error when : and -> are used
             // together in one expression
-            case 2 : break () -> assertNotEquals(PICKLE, GHERKIN, MISERABLY);
+            case 2:
+                break () -> assertNotEquals(PICKLE, GHERKIN, MISERABLY);
 
-            default : break fail(MISERABLY);
+            default:
+                break fail(MISERABLY);
         };
 
         return Stream.of(
