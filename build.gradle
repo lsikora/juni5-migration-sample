@@ -36,10 +36,9 @@ dependencies {
     testImplementation group: 'eu.codearte.catch-exception',
             name: 'catch-throwable',
             version: '1.4.6'
-    testImplementation group: 'junit',
-            name: 'junit',
-            version: '4.12'
-    testImplementation platform('org.junit:junit-bom:5.4.0') {
+/*    todo update slide to show that separet junit 4.12 dependency is not 
+    longer needed as it is now compile time dependency in vintage engine */
+    testImplementation platform('org.junit:junit-bom:5.5.0') {
         testImplementation group: 'org.junit.jupiter',
                 name: 'junit-jupiter'
         testRuntimeOnly group: 'org.junit.vintage',
