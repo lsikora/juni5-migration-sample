@@ -3,6 +3,7 @@ package io.github.lsikora.parametrized;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
+import java.time.Period;
 import java.util.Currency;
 
 import static io.github.lsikora.constants.Constants.APPLE;
@@ -21,10 +22,13 @@ class JUnit5 {
 
     //add notation about this warning
     @ParameterizedTest
-    @ValueSource
+    //todo explicit boolean is now supported, why not enum still
+    @ValueSource(booleans = true)
     @MethodSource
-    @CsvSource({"JPY", "PLN"})
-    @CsvFileSource(resources = "somefile.csv")
+
+    //todo explaing new empty value
+    @CsvSource(value = {"JPY", "PLN"}, emptyValue = "")
+    @CsvFileSource(resources = "somefile.csv", emptyValue = "")
     @EnumSource(Food.class)
 //    @EmptySource
 //    @NullSource
@@ -36,6 +40,13 @@ class JUnit5 {
     @CsvSource({"JPY", "PLN"})
     void automaticConversion(Currency currency) {
         assertNotNull(currency);
+    }
+
+    @ParameterizedTest
+    @CsvSource("P1D")
+    void automaticConversionTime(Period period) {
+
+        assertNotNull(period);
     }
 
     @ParameterizedTest
