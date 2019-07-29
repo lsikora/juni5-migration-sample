@@ -10,10 +10,15 @@ repositories {
     jcenter()
 }
 
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_12
+targetCompatibility = JavaVersion.VERSION_12
+
+tasks.withType(JavaCompile).each {
+    it.options.compilerArgs.add('--enable-preview')
+}
 
 test {
+    jvmArgs(['--enable-preview'])
     useJUnitPlatform()
     /*Uncomment for running only tagged tests*/
 //    useJUnitPlatform{
