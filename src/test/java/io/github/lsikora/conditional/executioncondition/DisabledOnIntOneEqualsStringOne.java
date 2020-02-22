@@ -9,11 +9,10 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
+/*This annotation is used to run test only when IntOneEqualsStringOne
+condition is met. This should always fail as it just returns Integer.valueOf(1).equals("1")*/
 @Target({TYPE, METHOD})
 @Retention(RUNTIME)
-//todo write to JUnit 5 guys. Example shows DisabledCondition and @Disabled
-// annotation but copy pasting will not work. I had to add @ExtendWith here
-// which is not present in @Disabled annotation
 @ExtendWith(IntOneEqualsStringOne.class)
 public @interface DisabledOnIntOneEqualsStringOne {
 }
