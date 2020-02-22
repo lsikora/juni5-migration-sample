@@ -6,8 +6,8 @@ import org.junit.jupiter.params.provider.*;
 import java.time.Period;
 import java.util.Currency;
 
-import static io.github.lsikora.constants.Constants.APPLE;
-import static io.github.lsikora.constants.Constants.ORANGE;
+import static io.github.lsikora.constants.Food.Constants.APPLE_NAME;
+import static io.github.lsikora.constants.Food.Constants.ORANGE_NAME;
 import static io.github.lsikora.parametrized.Food.GHERKIN;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.EnumSource.Mode.EXCLUDE;
@@ -15,7 +15,7 @@ import static org.junit.jupiter.params.provider.EnumSource.Mode.EXCLUDE;
 class JUnit5 {
 
     @ParameterizedTest
-    @ValueSource(strings = {ORANGE, APPLE})
+    @ValueSource(strings = {ORANGE_NAME, APPLE_NAME})
     void pureJunitParametrizedTest(String fruit) {
         assertTrue(!fruit.isBlank());
     }

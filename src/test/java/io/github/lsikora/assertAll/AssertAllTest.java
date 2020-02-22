@@ -3,7 +3,8 @@ package io.github.lsikora.assertAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static io.github.lsikora.constants.Constants.*;
+import static io.github.lsikora.constants.Food.*;
+import static io.github.lsikora.constants.Food.Constants.GLOBAL_MESSAGE;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 

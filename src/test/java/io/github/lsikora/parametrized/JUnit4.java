@@ -7,8 +7,8 @@ import org.junit.runners.Parameterized.Parameters;
 
 import java.util.List;
 
-import static io.github.lsikora.constants.Constants.APPLE;
-import static io.github.lsikora.constants.Constants.ORANGE;
+import static io.github.lsikora.constants.Food.Constants.APPLE_NAME;
+import static io.github.lsikora.constants.Food.Constants.ORANGE_NAME;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -22,7 +22,7 @@ public class JUnit4 {
 
     @Parameters
     public static List<String> data() {
-        return asList(ORANGE, APPLE);
+        return asList(ORANGE_NAME, APPLE_NAME);
     }
 
     @Test

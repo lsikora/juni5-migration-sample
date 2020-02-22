@@ -6,7 +6,7 @@ import org.junit.jupiter.api.TestFactory;
 
 import java.util.stream.Stream;
 
-import static io.github.lsikora.constants.Constants.*;
+import static io.github.lsikora.constants.Food.*;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
