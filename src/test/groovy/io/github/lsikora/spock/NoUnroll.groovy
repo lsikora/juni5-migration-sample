@@ -1,10 +1,10 @@
 package io.github.lsikora.spock
 
+import org.junit.jupiter.api.DisplayName
 import spock.lang.Specification
 import spock.lang.Unroll
 
-/*When this test is run with juni 4.12 it will contain 6 test cases
-* same run with JUnit 5 Vintage engine will contain 2 test cases*/
+@DisplayName("When this test is run with JUnit 4.12 it will contain 6 test cases same run with JUnit 5 Vintage engine 5.2 will contain 2 test cases same run with JUnit 5 Vintage engine 5.5 will contain 4 test cases")
 class NoUnroll extends Specification {
     @Unroll
     def "#left is not same as #right"(Food left, Food right) {
