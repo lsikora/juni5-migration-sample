@@ -4,7 +4,10 @@ import org.junit.jupiter.api.DisplayName
 import spock.lang.Specification
 import spock.lang.Unroll
 
-@DisplayName("When this test is run with JUnit 4.12 it will contain 6 test cases same run with JUnit 5 Vintage engine 5.2 will contain 2 test cases same run with JUnit 5 Vintage engine 5.5 will contain 4 test cases")
+/* When this test is run with JUnit 4.12 it will contain 6 test cases
+same run with JUnit 5 Vintage engine 5.2 will contain 2 test cases
+same run with JUnit 5 Vintage engine 5.5 will contain 4 test cases */
+
 class NoUnroll extends Specification {
     @Unroll
     def " Comparing #left to #right"(Food left, Food right) {
