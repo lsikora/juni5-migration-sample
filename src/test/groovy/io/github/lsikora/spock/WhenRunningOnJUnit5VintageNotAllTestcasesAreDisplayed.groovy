@@ -8,9 +8,10 @@ import spock.lang.Unroll
 same run with JUnit 5 Vintage engine 5.2 will contain 2 test cases
 same run with JUnit 5 Vintage engine 5.5 will contain 4 test cases */
 
-class NoUnroll extends Specification {
+class WhenRunningOnJUnit5VintageNotAllTestCasesAreDisplayed extends
+        Specification {
     @Unroll
-    def " Comparing #left to #right"(Food left, Food right) {
+    def "Comparing #left to #right"(Food left, Food right) {
         expect:
         !left.equals(right)
 
