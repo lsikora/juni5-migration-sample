@@ -18,27 +18,4 @@ class AssertAllTest {
             );
         });
     }
-
-    private class Basket{
-        private final String apple = APPLE;
-        private final String orange = ORANGE;
-        private final String gherkin = GHERKIN;
-        private final String pickle = PICKLE;
-
-        public String getApple() {
-            return apple;
-        }
-
-        public String getOrange() {
-            return orange;
-        }
-
-        public String getGherkin() {
-            return gherkin;
-        }
-
-        public String getPickle() {
-            return pickle;
-        }
-    }
 }
