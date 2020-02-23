@@ -1,11 +1,15 @@
 package io.github.lsikora.extensions.naiveGlobalTimeout;
 
+import io.github.lsikora.extensions.naiveGlobalTimeout.GlobalTimeoutExtension.GlobalTimeout;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import static java.lang.Thread.sleep;
 
-@ExtendWith(GlobalTimeoutExtension.class)
+
+@DisplayName("This test shows that simple global timeout will be applied to " +
+        "all tests in class")
+@GlobalTimeout
 class JUnit5WithGlobalTimeout {
 
     @Test
