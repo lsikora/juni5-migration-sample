@@ -3,7 +3,7 @@ package io.github.lsikora.testtemplate;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import static io.github.lsikora.parametrized.Food.GHERKIN;
+import static io.github.lsikora.constants.Food.GHERKIN;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class JUnit5 {
